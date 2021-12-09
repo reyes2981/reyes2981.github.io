@@ -65,8 +65,50 @@ main {
 
 #sidebar {
     background-color: blue;
-
     grid-area: sidebar;
     border-radius: 5px;
     padding-top: 5px;
+}
+
+#about {
+    background-color: orange;
+    grid-area: about;
+    border-radius: 5px;
+    padding-top: 5px;
+}
+
+#blog {
+    background-color: darkgreen;
+    grid-area: blog;
+    border-radius: 5px;
+    padding-top: 5px;
+}
+
+#container1 {
+    background-color: rgb(133, 25, 118);
+    grid-area: container1;
+    border-radius: 5px;
+    padding-top: 5px;
+}
+
+footer {
+    background-color: grey;
+    grid-area: footer;
+    border-radius: 5px;
+    padding-top: 5px;
+}
+
+@media only screen and (max-width: 550px) {
+    .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
+    grid-template-areas: 
+    "nav"
+    "sidebar"
+    "main"
+    "about"
+    "blog"
+    "container1"
+    "footer";
+    }
 }
