@@ -33,52 +33,40 @@ input {
     background-color: #84a59d;
 }
 
-
-/*nav ul {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-    list-style-type: none;
-
-}
-
-nav li a {
-    color: #f7ede2;
-    font-weight: bold;
-    text-decoration: none;
-
-}*/
-
-.content {
-    grid-area: content;
-}
-
-.sidebar {
-    grid-area: sidebar;
-    justify-content: center;
-}
-
-
-img {
-    clip-path: circle();
-    width: 200px;
-    height: 200px;
-
-}
-
-footer {
-    grid-area: footer;
-}
-
 .container {
-    font-size: 1.5em;
-   
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 1.5fr 1.2fr 0.8fr;
+    grid-template-areas: 
+    "nav nav nav nav"
+    "sidebar main main main"
+    "sidebar about blog container1"
+    "sidebar footer footer footer";
+    grid-gap: 0.2rem;
+    font-weight: 800;
+    font-size:12px;
+    text-align: center;
 }
 
-.content,
-.sidebar,
-.footer {
-    padding: 1em;
+nav {
+    background-color: white;
+    grid-area: nav;
+    border-radius: 5px;
+    padding-top: 5px;
+}
+
+main {
+    background-color: red;
+    grid-area: main;
+    border-radius: 5px;
+    padding-top: 5px;
+}
+
+#sidebar {
+    background-color: blue;
+
+    grid-area: sidebar;
+    border-radius: 5px;
+    padding-top: 5px;
 }
