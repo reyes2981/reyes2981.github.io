@@ -11,12 +11,16 @@ global style
     --text-black-700: #555555;
     --text-black-600: #666666;
     --text-black-300: #bbbbbb;
+    --outer-shadow: 3px 3px 3px #d0d0d0, -3px -3px -3px #f8f8f8;
+    --outer-shadow-0: 0 0 0 #d0d0d0, 0 0 0 #f8f8f8;
+    --inner-shadow: inset 3px 3px 3px #d0d0d0, inset -3px -3px -3px #f8f8f8;
 }
 
 body {
     font-size: 16px;
     line-height: 1.5;
     overflow-x: hidden;
+    background-color: var(--bg-black-50);
 }
 
 * {
@@ -27,7 +31,7 @@ body {
 }
 
 ::before, ::after {
-    box-sizing: border-box
+    box-sizing: border-box;
 }
 
 a {
@@ -59,6 +63,10 @@ img {
     justify-content: space-between;
 }
 
+.outer-shadow {
+    box-shadow: var(--outer-shadow);
+}
+
 /*-------------
 global style
 -------------*/
@@ -88,7 +96,6 @@ global style
 .header .hamburger-btn {
     height: 40px;
     width: 40px;
-    box-shadow: 0 0 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -113,6 +120,10 @@ global style
 }
 
 .header .hamburger-btn span:before {
-    top: -6px;
+    top: 6px;
 
+}
+
+.header .hamburger-btn span:after {
+    top: 6px;
 }
