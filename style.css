@@ -68,7 +68,7 @@ img {
 }
 
 /*-------------
-global style
+header
 -------------*/
 
 .header {
@@ -96,6 +96,7 @@ global style
 .header .hamburger-btn {
     height: 40px;
     width: 40px;
+    box-shadow: 0 0 10px;
     display: flex;
     align-items: center;
     justify-content: center;
